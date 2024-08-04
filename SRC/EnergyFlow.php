@@ -10,7 +10,7 @@
  $dat=file_get_contents("http://10.0.9.6/uebersicht/index.php");
  preg_match('#BKW Prod. :.*\+.(.*)#', $dat, $match);
 // echo "match = ".$match[1];
- preg_match('#\=(.[-0-9]+)\s(.*)#',$match[1],$match1);
+ preg_match('#\=(.[-0-9]*)\s(.*)#',$match[1],$match1);
  $solar = $match1[1]; if ($solar=="") $solar=0;
 // echo "Solar = ".$solar;
 
